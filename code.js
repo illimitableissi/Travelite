@@ -15,3 +15,13 @@ var settings = {
 $.ajax(settings).done(function(response) {
   console.log(response);
 });
+
+ var accuWeatherAPI = "35fHUKKIy6l510Zqvev07zXAUSKmCzDr";
+ var accuWeatherUrl = "http://dataservice.accuweather.com/locations/v1/search?q=Atlanta&&apikey=" + accuWeatherAPI +
+
+$.ajax({
+  url: accuWeatherUrl,
+  method: "GET"
+}).then(function(response) {
+  console.log(response);
+});
