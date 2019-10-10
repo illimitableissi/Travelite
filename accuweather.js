@@ -40,14 +40,22 @@ console.log(dailyForecasts[i].Temperature.Minimum.Value)
 console.log(dailyForecasts[i].Day.IconPhrase)
 console.log(dailyForecasts[i].Date)
 
+var date = moment(dailyForecasts[i].Date);
+date = date.format("dddd");
+
+console.log (date);
+
 newDiv = $("<div>")
 newDiv.addClass("card #4db6ac teal lighten-2");
-var p = $("<h5>");
-p.append(dailyForecasts[i].Day.IconPhrase)
+var p = $("<h5>")
+p.append("<b>" + dailyForecasts[i].Day.IconPhrase + "</b>")
 var p2 = $("<h6>")
 p2.append("High: " + dailyForecasts[i].Temperature.Maximum.Value + " F")
 var p3 = $("<h6>")
 p3.append("Low: " + dailyForecasts[i].Temperature.Minimum.Value + " F")
+var p4 = $("<h5>")
+p4.append("<u>" + date + "</u>");
+newDiv.append(p4);
 newDiv.append(p);
 newDiv.append(p2);
 newDiv.append(p3)
