@@ -3,7 +3,7 @@
       var apikey = "35fHUKKIy6l510Zqvev07zXAUSKmCzDr"
       var accuweatherUrl = `https://dataservice.accuweather.com/locations/v1/search?q=${city}&apikey=${apikey}`
 
-
+     
       $.ajax({
       url: accuweatherUrl,
       method: "GET"
@@ -66,3 +66,4 @@ weatherInfo.append(newDiv)
 
 });
     });
+ 
