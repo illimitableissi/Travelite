@@ -28,7 +28,24 @@
       method: "GET"
     }).then(function(response) {
 
-      console.log(response)
-    });
+      console.log(response.DailyForecasts)
 
+      var dailyForecasts = response.DailyForecasts
+
+
+for (var i = 0; i < dailyForecasts.length; i++) {
+    
+console.log(dailyForecasts[i].Temperature.Maximum.Value)
+console.log(dailyForecasts[i].Temperature.Minimum.Value)
+
+var weatherInfo = $("#weather-info")
+console.log(weatherInfo)
+
+weatherInfo.append(dailyForecasts[i].Temperature.Maximum.Value + "<br>");
+weatherInfo.append(dailyForecasts[i].Temperature.Minimum.Value + "<br>");
+
+}
+
+
+});
     });
