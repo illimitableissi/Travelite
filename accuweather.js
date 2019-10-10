@@ -37,13 +37,22 @@ for (var i = 0; i < dailyForecasts.length; i++) {
     
 console.log(dailyForecasts[i].Temperature.Maximum.Value)
 console.log(dailyForecasts[i].Temperature.Minimum.Value)
+console.log(dailyForecasts[i].Day.IconPhrase)
+console.log(dailyForecasts[i].Date)
 
+newDiv = $("<div>")
+newDiv.addClass("card #4db6ac teal lighten-2");
+var p = $("<h5>");
+p.append(dailyForecasts[i].Day.IconPhrase)
+var p2 = $("<h6>")
+p2.append("High: " + dailyForecasts[i].Temperature.Maximum.Value + " F")
+var p3 = $("<h6>")
+p3.append("Low: " + dailyForecasts[i].Temperature.Minimum.Value + " F")
+newDiv.append(p);
+newDiv.append(p2);
+newDiv.append(p3)
 var weatherInfo = $("#weather-info")
-console.log(weatherInfo)
-
-weatherInfo.append(dailyForecasts[i].Temperature.Maximum.Value + "<br>");
-weatherInfo.append(dailyForecasts[i].Temperature.Minimum.Value + "<br>");
-
+weatherInfo.append(newDiv)
 }
 
 
