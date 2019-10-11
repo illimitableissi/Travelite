@@ -8,10 +8,7 @@ var settings = {
 
 $.ajax(settings).done(function(response) {
   console.log(response);
-  var priceRubles = response.data;
-  console.log(priceRubles);
-  var priceDollars = Math.floor(priceRubles * 0.01539);
-  var $card = $(".card-title");
-  $card.text("$" + priceDollars + " USD");
-  console.log(`The price of the flight is $${priceDollars} USD`);
+  // var priceRubles = response.data;
+  // console.log(priceRubles);
+  // console.log(`The price of the flight is $${priceDollars} USD`);
 });
