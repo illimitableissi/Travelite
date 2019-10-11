@@ -8,6 +8,17 @@ var settings = {
 
 $.ajax(settings).done(function(response) {
   console.log(response);
+  var data = response.data;
+  console.log(data);
+  var monthsPrice = {
+    thisMonth: data["2019-10"].price,
+    nextMonth: data["2019-11"].price,
+    December: data["2019-12"].price,
+    February: data["2020-02"].price,
+    March: data["2020-03"].price
+  };
+  console.log(monthsPrice);
+
   // var priceRubles = response.data;
   // console.log(priceRubles);
   // console.log(`The price of the flight is $${priceDollars} USD`);
