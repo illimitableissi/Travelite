@@ -1,6 +1,6 @@
-var accessKey = "3f23404315a9a78edc99322fbaa1a422fa81490f52f7b014ef9bf328d1ad6033";
+var accessKey = "13904736-af373ef91e779b4a5ced60328";
 var city = "Atlanta";
-var pictureURL = `https://api.unsplash.com/photos/random?client_id=${accessKey}&query=${city}+city`;
+var pictureURL = `https://pixabay.com/api/?key=${accessKey}&q=${city}&image_type=photo&per_page=3`;
 
 $.ajax({
     url: pictureURL,
@@ -10,6 +10,14 @@ $.ajax({
     console.log(pictureURL);
     console.log(response);
 
-    console.log(response.urls.regular);
+    for (let i = 0; i < response.hits.length; i++) {
+
+      console.log(response.hits[i].webformatURL);
+
+      var newImg = $("<img>");
+      newImg.attr("src", response.hits[i].webformatURL)
+      $(".images").append(newImg);
+      
+    }
 
   })
