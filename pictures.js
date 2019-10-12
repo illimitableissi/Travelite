@@ -3,7 +3,7 @@ $("#search-button").on("click", function(event) {
  
 
 var accessKey = "13904736-af373ef91e779b4a5ced60328";
-var city = "Atlanta";
+var city = $("#destination-city").val();
 var pictureURL = `https://pixabay.com/api/?key=${accessKey}&q=${city}&image_type=photo&per_page=3`;
 
 $.ajax({
