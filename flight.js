@@ -15,7 +15,7 @@ var settings = {
 
     console.log(data);
 
-    var myTable = "<tr><td>Flight Number</td><td>Destination</td><td>Price</td><td>Departs</td><td>Arrives</td><td>Airline</td></tr>";
+    // var myTable = "<tr><td>Flight Number</td><td>Destination</td><td>Price</td><td>Departs</td><td>Arrives</td><td>Airline</td></tr>";
 
     myTable = appendMonthData(myTable, data["2019-10"]);
     myTable = appendMonthData(myTable, data["2019-11"]);
