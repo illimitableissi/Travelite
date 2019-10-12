@@ -10,14 +10,32 @@ $.ajax(settings).done(function(response) {
   console.log(response);
   var data = response.data;
   console.log(data);
-  var monthsPrice = {
-    thisMonth: data["2019-10"].price,
-    nextMonth: data["2019-11"].price,
-    December: data["2019-12"].price,
-    February: data["2020-02"].price,
-    March: data["2020-03"].price
-  };
-  console.log(monthsPrice);
+  var result = Object.keys(data).map(function(key) {
+    return [Number(key), data[key]];
+  });
+  console.log(result);
+  var i = 0;
+  while (i < result.length) {
+    console.log(`${result.length} flights returned`);
+    var flightPrices = result[i]["1"].price;
+
+    console.log(flightPrices);
+    // EVERYTHING GOES HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    i++;
+  }
+
+  // console.log(result[0])
+  // console.log(result[1]["1"]);
+  // console.log(result[1]["1"].price);
+  // console.log(data);
+  // var monthsPrice = {
+  //   thisMonth: data["2019-10"].price,
+  //   nextMonth: data["2019-11"].price,
+  //   December: data["2019-12"].price,
+  //   February: data["2020-02"].price,
+  //   March: data["2020-03"].price
+  // };
+  // console.log(monthsPrice);
 
   // var priceRubles = response.data;
   // console.log(priceRubles);
