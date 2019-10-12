@@ -1,5 +1,8 @@
-
-      var city = "Los Angeles"
+$("#search-button").on("click", function(event) {
+  event.preventDefault();
+ 
+ 
+ var city = $("#destination-city").val()
       var apikey = "35fHUKKIy6l510Zqvev07zXAUSKmCzDr"
       var accuweatherUrl = `https://dataservice.accuweather.com/locations/v1/search?q=${city}&apikey=${apikey}`
 
@@ -67,3 +70,4 @@ weatherInfo.append(newDiv)
 });
     });
  
+});
