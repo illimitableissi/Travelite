@@ -1,5 +1,6 @@
 $("#search-button").on("click", function(event) {
   event.preventDefault();
+  $("#weather-info").empty();
  
  
  var city = $("#destination-city").val()
