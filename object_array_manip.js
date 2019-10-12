@@ -1,12 +1,54 @@
-var obj = {
-    "1":5,
-    "2":7,
-    "3":0,
-    "4":0,
-    "5":0,
-    "6":0,
-    "7":0,
-    "8":0,
-    "9":0,
-    "10":0,
-    "11":0,"12":0}
+var cityCode = {
+  async: true,
+  crossDomain: true,
+  url: "http://autocomplete.travelpayouts.com/places2?term=Tampa&locale=en&types[]=city",
+  method: "GET"
+};
+
+$.ajax(cityCode).done(function(response) {
+  console.log(response[0].code);
+});
+
+var settings = {
+  async: true,
+  crossDomain: true,
+  url:
+    "http://api.travelpayouts.com/v1/prices/monthly?currency=USD&origin=ATL&destination=TPA &token=15b8d8251f337fc45164a04b18f5025a",
+  method: "GET"
+};
+
+$.ajax(settings).done(function(response) {
+  console.log(response);
+  var data = response.data;
+  console.log(data);
+  var result = Object.keys(data).map(function(key) {
+    return [Number(key), data[key]];
+  });
+  console.log(result);
+  var i = 0;
+  while (i < result.length) {
+    console.log(`${result.length} flights returned`);
+    var flightPrices = result[i]["1"].price;
+
+    console.log(flightPrices);
+    // EVERYTHING GOES HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    i++;
+  }
+
+//   // console.log(result[0])
+//   // console.log(result[1]["1"]);
+//   // console.log(result[1]["1"].price);
+//   // console.log(data);
+//   // var monthsPrice = {
+//   //   thisMonth: data["2019-10"].price,
+//   //   nextMonth: data["2019-11"].price,
+//   //   December: data["2019-12"].price,
+//   //   February: data["2020-02"].price,
+//   //   March: data["2020-03"].price
+//   // };
+//   // console.log(monthsPrice);
+
+//   // var priceRubles = response.data;
+//   // console.log(priceRubles);
+//   // console.log(`The price of the flight is $${priceDollars} USD`);
+});
