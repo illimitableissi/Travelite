@@ -2,7 +2,7 @@ var settings = {
   async: true,
   crossDomain: true,
   url:
-    "http://api.travelpayouts.com/v1/prices/monthly?currency=USD&origin=ATL&destination=LAX&token=15b8d8251f337fc45164a04b18f5025a",
+    "http://api.travelpayouts.com/v1/prices/monthly?currency=USD&origin=ATL&destination=CHI&token=15b8d8251f337fc45164a04b18f5025a",
   method: "GET"
 };
 
