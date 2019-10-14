@@ -24,7 +24,7 @@
   <body>
     <nav class="white" role="navigation">
       <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">TraveLite</a>
+        <a id="logo-container" href="#" class="brand-logo"></a>
       </div>
     </nav>
 
@@ -36,11 +36,7 @@
           <div class="row center">
           </div>
           <div class="row center">
-            <a
-              id="search-button"
-              class="btn-large waves-effect waves-light teal lighten-1"
-              >Search</a
-            >
+            <div id="description"><h4>Plan your next vacation.</h4></div>
           </div>
           <br /><br />
         </div>
@@ -66,13 +62,30 @@
                 <input id="destination-city" type="text" class="validate" />
                 <label for="destination-city">Destination City</label>
               </div>
+              <div class="row">
+
+                  <div class="col s4">
+                    <!-- Promo Content 1 goes here -->
+                  </div>
+                  <div class="col s4">
+                      <a
+                      id="search-button"
+                      class="btn-large waves-effect waves-light teal lighten-1"
+                      >Search</a
+                    >
+                  </div>
+                  <div class="col s4">
+                    <!-- Promo Content 3 goes here -->
+                  </div>
+            
+                </div>
             </div>
           </form>
 
           <div class="col s12 m8">
             <div class="icon-block">
 
-              <h5 class="center" id="travel-api-results"></h5>
+              <table class="centered highlight responsive-table" id="travel-api-results"></table>
 
             </div>
           </div>
@@ -100,7 +113,7 @@
         <div class="row">
           <div class="col s12 center">
             <h3><i class="mdi-content-send brown-text"></i></h3>
-            <h4 id="city-weather">Weather: 5-Day Forecast</h4>
+            <h4 id="city-weather">Weather: 5-Day Forecast by AccuWeather</h4>
             <div class="center-align light" id="weather-info"></div>
         </div>
       </div>
@@ -125,7 +138,7 @@
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
-            <h5 class="white-text">Pictures</h5>
+            <h5 class="white-text center">Pictures</h5>
             <div class="images"></div>
           </div>
         </div>

@@ -46,6 +46,7 @@ $.ajax(originCityConvert).done(function(response) {
         console.log(result);
       
         var myTable = "<tr><td>Flight Number</td><td>Destination</td><td>Price</td><td>Departs</td><td>Arrives</td><td>Airline</td></tr>";
+
         $("#travel-api-results").append(myTable);
       
         var i = 0;
@@ -86,6 +87,7 @@ $.ajax(originCityConvert).done(function(response) {
       
           i++;
         }
+
       })
   
   })

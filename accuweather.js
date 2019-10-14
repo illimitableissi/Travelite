@@ -18,7 +18,7 @@ $("#search-button").on("click", function(event) {
       // Create CODE HERE to log the resulting object
   console.log(response[0].Key)
 
-
+  $("#city-weather").html(`${response[0].EnglishName} Weather: 5-Day Forecast by AccuWeather`);
 
   var locationKey = response[0].Key
   console.log(locationKey)
@@ -66,7 +66,6 @@ newDiv.append(p3)
 var weatherInfo = $("#weather-info")
 weatherInfo.append(newDiv)
 }
-
 
 });
     });
