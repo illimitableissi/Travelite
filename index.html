@@ -1,19 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TraveLite</title>
+
+    <!-- CSS  -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="style.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
   </head>
   <body>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      src="code.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
+    <nav class="white" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo"></a>
+      </div>
+    </nav>
 
-   
+    <div id="index-banner" class="parallax-container">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <br /><br />
+          <h1 class="header center white-text text-lighten-2">TraveLite</h1>
+          <div class="row center">
+          </div>
+          <div class="row center">
+            <div id="description"><h4>Plan your next vacation.</h4></div>
+          </div>
+          <br /><br />
+        </div>
+      </div>
+      <div class="parallax">
+        <img src="Images/bujr_al_arab.jpg" alt="Unsplashed background img 1" />
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="section">
+        <!--   Icon Section   -->
+        <div class="row">
+          <form class="col s12 m4">
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">airplanemode_active</i>
+                <input id="origin-city" type="text" class="validate" />
+                <label for="origin-city">Origin City</label>
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">airplanemode_active</i>
+                <input id="destination-city" type="text" class="validate" />
+                <label for="destination-city">Destination City</label>
+              </div>
+              <div class="row">
+
+                  <div class="col s4">
+                    <!-- Promo Content 1 goes here -->
+                  </div>
+                  <div class="col s4">
+                      <a
+                      id="search-button"
+                      class="btn-large waves-effect waves-light teal lighten-1"
+                      >Search</a
+                    >
+                  </div>
+                  <div class="col s4">
+                    <!-- Promo Content 3 goes here -->
+                  </div>
+            
+                </div>
+            </div>
+          </form>
+
+          <div class="col s12 m8">
+            <div class="icon-block">
+
+              <table class="centered highlight responsive-table" id="travel-api-results"></table>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="parallax-container valign-wrapper">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <div class="row center">
+          </div>
+        </div>
+      </div>
+      <div class="parallax">
+        <img
+          src="Images/Flight_Into_Sunset.jpg"
+          alt="Unsplashed background img 2"
+        />
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="section">
+        <div class="row">
+          <div class="col s12 center">
+            <h3><i class="mdi-content-send brown-text"></i></h3>
+            <h4 id="city-weather">Weather: 5-Day Forecast by AccuWeather</h4>
+            <div class="center-align light" id="weather-info"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="parallax-container valign-wrapper">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <div class="row center">
+          </div>
+        </div>
+      </div>
+      <div class="parallax">
+        <img
+          src="Images/valley_mountains.jpg"
+          alt="Unsplashed background img 3"
+        />
+      </div>
+    </div>
+
+    <footer class="page-footer teal">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text center">Pictures</h5>
+            <div class="images"></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          Made by
+          <a class="brown-text text-lighten-3" href="http://materializecss.com"
+            >Materialize</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!--  jQuery-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- init.js -->
+    <script src="init.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Our javascript -->
+    <script src="accuweather.js"></script>
+    <script src="travel-api.js"></script>
+    <script src="pictures.js"></script>
   </body>
 </html>
