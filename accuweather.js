@@ -24,7 +24,7 @@ $("#search-button").on("click", function(event) {
   console.log(locationKey)
 
   var apiKeyTwo = "X2rdzsva8JGHE2zQQWVylD6Gr7kE8Wpe"
-  var forecastUrl = `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=${apiKeyTwo}`
+  var forecastUrl = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=${apiKeyTwo}`
 
   console.log(forecastUrl)
   $.ajax({

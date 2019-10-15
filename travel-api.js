@@ -7,7 +7,7 @@ $("#search-button").on("click", function(event) {
 var originCityConvert = {
   async: true,
   crossDomain: true,
-  url: `http://autocomplete.travelpayouts.com/places2?term=${originCity}&locale=en&types[]=city`,
+  url: `https://autocomplete.travelpayouts.com/places2?term=${originCity}&locale=en&types[]=city`,
   method: "GET"
 };
 
@@ -19,7 +19,7 @@ $.ajax(originCityConvert).done(function(response) {
   var destinationCityConvert = {
     async: true,
     crossDomain: true,
-    url: `http://autocomplete.travelpayouts.com/places2?term=${destinationCity}&locale=en&types[]=city`,
+    url: `https://autocomplete.travelpayouts.com/places2?term=${destinationCity}&locale=en&types[]=city`,
     method: "GET"
   };
   
@@ -32,7 +32,7 @@ $.ajax(originCityConvert).done(function(response) {
         async: true,
         crossDomain: true,
         url:
-          `http://api.travelpayouts.com/v1/prices/monthly?currency=USD&origin=${originCityCode}&destination=${destinationCityCode}&token=15b8d8251f337fc45164a04b18f5025a`,
+          `https://api.travelpayouts.com/v1/prices/monthly?currency=USD&origin=${originCityCode}&destination=${destinationCityCode}&token=15b8d8251f337fc45164a04b18f5025a`,
         method: "GET"
       };
       
