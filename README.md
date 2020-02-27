@@ -10,5 +10,5 @@ Description: A website where users can plan their next vacation. They enter in a
 
 ![forecasts](images/forecasts.PNG)
 
-![photos](images/photos.PNG)
+![photos](https://github.com/illimitableissi/Travelite/blob/master/Images/photos.PNG)
 
